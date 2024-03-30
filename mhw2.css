@@ -263,14 +263,29 @@ nav input {
   overflow: hidden;
   width: 65%;
   gap: 1px;
-  padding: 0 0 2%;
+  padding: 0 0 1.5%;
   z-index: 0;
 }
 
 .boxad img {
+  cursor: pointer;
   border-radius: 5px;
   height: 231px;
   border: 1px solid white;
+}
+
+.inforev {
+  width: 75%;
+  color: rgb(12, 226, 12);
+  background-color: #445566;
+  text-align: center;
+  border-width: 5px;
+  border-radius: 5px;
+  margin-bottom: -3%;
+  padding: 2% 2%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
 }
 
 .fotomobile {
