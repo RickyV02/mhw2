@@ -23,8 +23,14 @@ body {
   overflow-x: hidden;
 }
 
-span {
+.nascosto {
+  display: none;
+}
+
+nav span {
   font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 a {
@@ -43,7 +49,7 @@ header {
   top: 0;
 }
 
-input {
+nav input {
   border-radius: 20px;
   border: none;
   width: 23%;
@@ -82,6 +88,39 @@ input {
 
 .navsection nav a span {
   color: #d8e0d8;
+}
+
+#loginwindow {
+  position: absolute;
+  top: 10%;
+  border-radius: 3%;
+  z-index: 5;
+  background-color: #445566;
+  padding: 0 2%;
+  border: solid 3px #14181c;
+}
+
+#loginwindow input {
+  border: none;
+  border-radius: 5px;
+  background-color: #9ab;
+}
+
+.cross {
+  padding-top: 3%;
+  margin-left: 100%;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+#loginwindow p {
+  color: white;
+  font-size: 13px;
+}
+
+#loginwindow a {
+  color: #00c030;
 }
 
 .container {
@@ -965,6 +1004,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .nascondi {
+    display: none;
+  }
+
   header {
     display: flex;
     background-color: #14181c;
@@ -1038,10 +1081,6 @@ footer {
 
   .socials img {
     height: 20px;
-  }
-
-  .nascondi {
-    display: none;
   }
 
   .boxad {

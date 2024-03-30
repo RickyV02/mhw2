@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="mhw1.css" />
+    <link rel="stylesheet" href="mhw2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link href="https://db.onlinewebfonts.com/c/f82a45d96a5a30abb6417c5b81fc416d?family=Graphik+LC+Web+Semibold+Regular" rel="stylesheet">
-    
+    <script src="mhw2.js" defer></script>
     <title>Letterboxd-Social Film Discovery</title>
   </head>
   <body>
@@ -20,6 +20,14 @@
       </div>
       <div class ="sfondoletterbox">
       </div>
+     <div id = "loginwindow" class = "nascosto">
+            <img class = "cross" src="public/cross.png">
+            <p>Username</p>
+            <input type = "text">
+            <p>Password</p>
+            <input type = "text">
+            <p> Not Registred yet?<a href=""> Sign in now!</a></p>
+     </div> 
       <img class = "logoletterbox" src="public/letterbox.png"/>
     </div>
     <header>
@@ -33,7 +41,7 @@
           <a href=""><img src="public/letterbox.png" /></a>
         </h1>
         <nav>
-          <a href=""><span>SIGN IN</span></a>
+          <span class = "login">SIGN IN</span>
           <a href=""><span>CREATE ACCOUNT</span></a>
           <a href=""><span>FILMS</span></a>
           <a href=""><span>LISTS</span></a>
