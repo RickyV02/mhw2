@@ -1,4 +1,4 @@
-const loginitems = document.querySelectorAll(".login");
+const loginitem = document.querySelector(".login");
 const cross_img = document.querySelectorAll(".cross");
 
 function login() {
@@ -6,13 +6,11 @@ function login() {
   window.classList.remove("nascosto");
 }
 
+loginitem.addEventListener("click", login);
+
 function close(event) {
   const element = event.currentTarget.parentNode;
   element.classList.add("nascosto");
-}
-
-for (const logitem of loginitems) {
-  logitem.addEventListener("click", login);
 }
 
 for (const crosses of cross_img) {
