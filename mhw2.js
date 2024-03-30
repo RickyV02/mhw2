@@ -52,8 +52,8 @@ function resetoverviews(event) {
   } else {
     image.src = "public/films3.png";
   }
-  image.removeEventListener("mouseover", resetoverviews);
-  image.addEventListener("mouseover", changeoverviews);
+  image.toggle("mouseenter", resetoverviews);
+  image.toggle("mouseleave", changeoverviews);
 }
 
 function changeoverviews(event) {
@@ -66,10 +66,11 @@ function changeoverviews(event) {
   } else {
     image.src = "public/ov3.png";
   }
-  image.removeEventListener("mouseover", changeoverviews);
-  image.addEventListener("mouseover", resetoverviews);
+  image.toggle("mouseenter", resetoverviews);
+  image.toggle("mouseleave", changeoverviews);
 }
 
 for (const ov of overviews) {
-  ov.addEventListener("mouseover", changeoverviews);
+  ov.addEventListener("mouseenter", changeoverviews);
+  ov.addEventListener("mouseleave", resetoverviews);
 }
