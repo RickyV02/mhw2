@@ -8,15 +8,9 @@ function login() {
   window.classList.remove("nascosto");
 }
 
-loginitem.addEventListener("click", login);
-
 function close(event) {
   const element = event.currentTarget.parentNode;
   element.classList.add("nascosto");
-}
-
-for (const crosses of cross_img) {
-  crosses.addEventListener("click", close);
 }
 
 function hidereviews(event) {
@@ -36,10 +30,6 @@ function showreviews(event) {
   elementdiv.appendChild(new_text);
   element.removeEventListener("click", showreviews);
   element.addEventListener("click", hidereviews);
-}
-
-for (const rev of boxadreviews) {
-  rev.addEventListener("click", showreviews);
 }
 
 function resetoverviews(event) {
@@ -68,6 +58,16 @@ function changeoverviews(event) {
   }
   image.toggle("mouseenter", resetoverviews);
   image.toggle("mouseleave", changeoverviews);
+}
+
+loginitem.addEventListener("click", login);
+
+for (const crosses of cross_img) {
+  crosses.addEventListener("click", close);
+}
+
+for (const rev of boxadreviews) {
+  rev.addEventListener("click", showreviews);
 }
 
 for (const ov of overviews) {
