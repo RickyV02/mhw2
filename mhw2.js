@@ -1,24 +1,12 @@
-const loginitem = document.querySelector(".login");
-const cross_img = document.querySelectorAll(".cross");
-const boxadreviews = document.querySelectorAll(".boxad a");
-const overviews = document.querySelectorAll(".ac img");
-const accountitem = document.querySelectorAll(".crea-account");
-
 function login(event) {
   event.preventDefault();
   const window = document.getElementById("loginwindow");
   window.classList.remove("nascosto");
 }
 
-loginitem.addEventListener("click", login);
-
 function close(event) {
   const element = event.currentTarget.parentNode;
   element.classList.add("nascosto");
-}
-
-for (const crosses of cross_img) {
-  crosses.addEventListener("click", close);
 }
 
 function hidereviews(event) {
@@ -38,10 +26,6 @@ function showreviews(event) {
   elementdiv.appendChild(new_text);
   element.removeEventListener("mouseenter", showreviews);
   element.addEventListener("mouseleave", hidereviews);
-}
-
-for (const rev of boxadreviews) {
-  rev.addEventListener("mouseenter", showreviews);
 }
 
 function resetoverviews(event) {
@@ -72,16 +56,52 @@ function changeoverviews(event) {
   image.toggle("mouseleave", changeoverviews);
 }
 
+function crea_account(event) {
+  event.preventDefault();
+  modal_view.classList.remove("nascosto");
+  modal_view.scrollIntoView();
+  document.body.classList.add("noscroll");
+}
+
+function close_modal() {
+  document.body.classList.remove("noscroll");
+  modal_view.classList.add("nascosto");
+}
+
+function checkToggle(event) {
+  const item = event.currentTarget;
+  const check = item.querySelector("img");
+  check.classList.toggle("nascosto");
+}
+
+const loginitem = document.querySelector(".login");
+const cross_img = document.querySelectorAll(".cross");
+const boxadreviews = document.querySelectorAll(".boxad a");
+const overviews = document.querySelectorAll(".ac img");
+const accountitem = document.querySelectorAll(".crea-account");
+const modal_view = document.querySelector("#modal_account");
+const checkitem = document.querySelectorAll("#check");
+
+loginitem.addEventListener("click", login);
+
+for (const rev of boxadreviews) {
+  rev.addEventListener("mouseenter", showreviews);
+}
+
 for (const ov of overviews) {
   ov.addEventListener("mouseenter", changeoverviews);
   ov.addEventListener("mouseleave", resetoverviews);
 }
 
-function crea_account(event) {
-  event.preventDefault();
-  const item = event.currentTarget;
-}
-
 for (const acc of accountitem) {
   acc.addEventListener("click", crea_account);
+}
+
+for (const crosses of cross_img) {
+  crosses.addEventListener("click", close);
+  crosses.addEventListener("click", close_modal);
+}
+
+for (const c of checkitem) {
+  c.addEventListener("click", checkToggle);
 }
