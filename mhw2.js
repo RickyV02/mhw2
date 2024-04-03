@@ -2,8 +2,10 @@ const loginitem = document.querySelector(".login");
 const cross_img = document.querySelectorAll(".cross");
 const boxadreviews = document.querySelectorAll(".boxad span");
 const overviews = document.querySelectorAll(".ac img");
+const accountitem = document.querySelectorAll("crea-account");
 
-function login() {
+function login(event) {
+  event.preventDefault();
   const window = document.getElementById("loginwindow");
   window.classList.remove("nascosto");
 }
@@ -73,4 +75,13 @@ function changeoverviews(event) {
 for (const ov of overviews) {
   ov.addEventListener("mouseenter", changeoverviews);
   ov.addEventListener("mouseleave", resetoverviews);
+}
+
+function crea_account(event) {
+  const item = event.currentTarget;
+  item.preventDefault();
+}
+
+for (const acc of accountitem) {
+  acc.addEventListener("click", crea_acount);
 }

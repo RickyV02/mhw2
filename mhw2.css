@@ -423,10 +423,6 @@ h1 {
   line-height: 1;
 }
 
-.word span {
-  color: white;
-}
-
 .reviews {
   display: flex;
   width: 65%;
