@@ -2,7 +2,7 @@ const loginitem = document.querySelector(".login");
 const cross_img = document.querySelectorAll(".cross");
 const boxadreviews = document.querySelectorAll(".boxad a");
 const overviews = document.querySelectorAll(".ac img");
-const accountitem = document.querySelectorAll("crea-account");
+const accountitem = document.querySelectorAll(".crea-account");
 
 function login(event) {
   event.preventDefault();
@@ -78,10 +78,10 @@ for (const ov of overviews) {
 }
 
 function crea_account(event) {
+  event.preventDefault();
   const item = event.currentTarget;
-  item.preventDefault();
 }
 
 for (const acc of accountitem) {
-  acc.addEventListener("click", crea_acount);
+  acc.addEventListener("click", crea_account);
 }
