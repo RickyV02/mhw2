@@ -1,6 +1,6 @@
 const loginitem = document.querySelector(".login");
 const cross_img = document.querySelectorAll(".cross");
-const boxadreviews = document.querySelectorAll(".boxad span");
+const boxadreviews = document.querySelectorAll(".boxad a");
 const overviews = document.querySelectorAll(".ac img");
 const accountitem = document.querySelectorAll("crea-account");
 
