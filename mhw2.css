@@ -52,7 +52,7 @@ header {
   top: 0;
 }
 
-nav input {
+nav input[type="text"] {
   border-radius: 20px;
   border: none;
   width: 23%;
@@ -103,7 +103,7 @@ nav input {
   border: solid 3px #14181c;
 }
 
-#loginwindow input {
+#loginwindow input[type="text"] {
   border: none;
   border-radius: 5px;
   background-color: #9ab;
@@ -167,7 +167,7 @@ nav input {
   margin-left: 90%;
 }
 
-.modal_div input {
+.modal_div input[type="text"] {
   border: none;
   border-radius: 5px;
   width: 70%;
@@ -185,6 +185,18 @@ nav input {
 input[type="checkbox"] {
   width: 25px;
   height: 25px;
+}
+
+input[type="checkbox"]:hover {
+  color: black;
+}
+
+#signup {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 20px;
+  width: 20%;
 }
 
 .container {

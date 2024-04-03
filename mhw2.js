@@ -1,3 +1,10 @@
+const loginitem = document.querySelector(".login");
+const cross_img = document.querySelectorAll(".cross");
+const boxadreviews = document.querySelectorAll(".boxad a");
+const overviews = document.querySelectorAll(".ac img");
+const accountitem = document.querySelectorAll(".crea-account");
+const modal_view = document.querySelector("#modal_account");
+
 function login(event) {
   event.preventDefault();
   const window = document.getElementById("loginwindow");
@@ -67,13 +74,6 @@ function close_modal() {
   document.body.classList.remove("noscroll");
   modal_view.classList.add("nascosto");
 }
-
-const loginitem = document.querySelector(".login");
-const cross_img = document.querySelectorAll(".cross");
-const boxadreviews = document.querySelectorAll(".boxad a");
-const overviews = document.querySelectorAll(".ac img");
-const accountitem = document.querySelectorAll(".crea-account");
-const modal_view = document.querySelector("#modal_account");
 
 loginitem.addEventListener("click", login);
 
