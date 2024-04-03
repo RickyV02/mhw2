@@ -68,19 +68,12 @@ function close_modal() {
   modal_view.classList.add("nascosto");
 }
 
-function checkToggle(event) {
-  const item = event.currentTarget;
-  const check = item.querySelector("img");
-  check.classList.toggle("nascosto");
-}
-
 const loginitem = document.querySelector(".login");
 const cross_img = document.querySelectorAll(".cross");
 const boxadreviews = document.querySelectorAll(".boxad a");
 const overviews = document.querySelectorAll(".ac img");
 const accountitem = document.querySelectorAll(".crea-account");
 const modal_view = document.querySelector("#modal_account");
-const checkitem = document.querySelectorAll("#check");
 
 loginitem.addEventListener("click", login);
 
@@ -100,8 +93,4 @@ for (const acc of accountitem) {
 for (const crosses of cross_img) {
   crosses.addEventListener("click", close);
   crosses.addEventListener("click", close_modal);
-}
-
-for (const c of checkitem) {
-  c.addEventListener("click", checkToggle);
 }
