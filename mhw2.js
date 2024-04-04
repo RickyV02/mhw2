@@ -4,6 +4,7 @@ const boxadreviews = document.querySelectorAll(".boxad a");
 const overviews = document.querySelectorAll(".ac img");
 const accountitem = document.querySelectorAll(".crea-account");
 const modal_view = document.querySelector("#modal_account");
+const newsitem = document.querySelectorAll("#show_more");
 
 function login(event) {
   event.preventDefault();
@@ -75,6 +76,13 @@ function close_modal() {
   modal_view.classList.add("nascosto");
 }
 
+function showmore(event) {
+  event.preventDefault();
+  const item = event.currentTarget;
+  item.textContent = item.dataset.info;
+  item.classList.add("nocursor");
+}
+
 loginitem.addEventListener("click", login);
 
 for (const rev of boxadreviews) {
@@ -93,4 +101,8 @@ for (const acc of accountitem) {
 for (const crosses of cross_img) {
   crosses.addEventListener("click", close);
   crosses.addEventListener("click", close_modal);
+}
+
+for (const news of newsitem) {
+  news.addEventListener("click", showmore);
 }
