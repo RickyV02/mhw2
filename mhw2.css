@@ -567,7 +567,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
 }
 
 .titolofilm {
@@ -630,6 +629,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-left: -3%;
   font-size: 1rem;
   line-height: 24px;
 }
@@ -1291,10 +1291,6 @@ footer {
   }
 
   .bloccorec {
-    width: 100%;
-  }
-
-  .film-content {
     width: 100%;
   }
 
